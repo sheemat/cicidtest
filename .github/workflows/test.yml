@@ -40,5 +40,5 @@ jobs:
       - name: Webhook
         uses: distributhor/workflow-webhook@v1
         env:
-              webhook_url: https://webhook.site/0295bd0b-2299-4427-93a7-8e1ad5d865e1
+              webhook_url: https://akpy75rz4e.execute-api.us-west-2.amazonaws.com/DEV/publicattest
               webhook_secret: "Y0uR5ecr3t"
