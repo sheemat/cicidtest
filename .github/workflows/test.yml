@@ -42,12 +42,4 @@ jobs:
         env:
               webhook_url: https://akpy75rz4e.execute-api.us-west-2.amazonaws.com/DEV/publicattest
               webhook_secret: "Y0uR5ecr3t"
-
-        # Runs a webhook
-        - name: Webhook
-        uses: distributhor/workflow-webhook@v1
-        env:
-            webhook_url: https://rijb8x2uf0.execute-api.us-west-2.amazonaws.com/DEV/gra_note_build
-            webhook_secret: "Y0uR5ecr3t"
-            data: '{"ProjectId": "mathew1",  "NoteId": "Note12",  "ShDesc": "Short",  "LoDesc" : "Long"}'
-
+              data: '{"ProjectId": "mathew1",  "NoteId": "Note12",  "ShDesc": "Short",  "LoDesc" : "Long"}'
