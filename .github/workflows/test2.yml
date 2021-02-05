@@ -18,30 +18,11 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    runs-on: self-hosted
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo Running externally
           python3 datetime101.py
-        
-      # Runs a webhook
-      - name: Webhook
-        uses: distributhor/workflow-webhook@v1
-        env:
-              webhook_url: https://akpy75rz4e.execute-api.us-west-2.amazonaws.com/DEV/publicattest
-              webhook_secret: "Y0uR5ecr3t"
-              data: '{"ProjectId": "mathew1",  "NoteId": "Note12",  "ShDesc": "Short",  "LoDesc" : "Long"}'
-
